@@ -18,6 +18,8 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		specflags_ia32	"-fomit-frame-pointer"
+
 %description
 The goal of this game is to make the highest score by matching a
 number of balls of the same color in a horizontal, vertical or
