@@ -4,12 +4,13 @@ Summary(pl):	Prosta gra logiczna
 Summary(ru):	Простая и увлекательная логическая игра
 Name:		gtkballs
 Version:	2.2.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-ac_fix.patch
+Patch1:		%{name}-desktop.patch
+Patch2:		%{name}-ac_fix.patch
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -47,6 +48,7 @@ GtkBalls -- это простая логическая игра.  Цель игры -- составлять
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f missing
