@@ -64,8 +64,6 @@ ln -s %{_datadir}/%{name} $RPM_BUILD_ROOT%{_pixmapsdir}
 install gnome-gtkballs.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install GtkBalls.desktop $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-gzip -9nf README ChangeLog NEWS README.russian TODO
-
 %find_lang %{name}
 
 %clean
@@ -73,7 +71,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README ChangeLog NEWS README.russian TODO
 %attr(755,root,games) %{_bindir}/*
 %{_datadir}/%{name}
 %{_mandir}/man6/*
