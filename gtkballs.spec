@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
+# Source0-md5:	0f9997110518460db508af353f6324c2
 Patch1:		%{name}2-desktop.patch
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	autoconf
