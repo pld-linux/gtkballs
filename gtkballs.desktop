@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=GtkBalls
+Comment=Simple logic game
+Comment[pl]=Prosta gra logiczna
+Exec=gtkballs
+Icon=gnome-gtkballs.png
+StartupNotify=false
+Terminal=false
+Type=Application
+Categories=GTK;Game;LogicGame;
+Encoding=UTF-8
+# vi: encoding=utf-8
