@@ -18,7 +18,6 @@ BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 The goal of this game is to make the highest score by matching a
