@@ -51,9 +51,9 @@ GtkBalls -- это простая логическая игра.  Цель игры -- составлять
 
 %build
 rm -f missing
-aclocal
+%{__aclocal}
 %{__autoconf}
-autoheader
+%{__autoheader}
 %{__automake}
 %configure \
 	--localstatedir=%{_localstatedir}/games
