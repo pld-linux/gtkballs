@@ -1,5 +1,5 @@
 --- ./configure.in.orig	Mon Feb 11 16:18:24 2002
-+++ ./configure.in	Sat Aug 17 12:56:20 2002
++++ ./configure.in	Sat Aug 17 13:05:39 2002
 @@ -42,17 +42,14 @@
  nlsdir='${prefix}/share/locale'
  AC_SUBST(nlsdir)
