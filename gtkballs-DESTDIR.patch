@@ -1,0 +1,60 @@
+diff -urN gtkballs-2.0.orig/Makefile.am gtkballs-2.0/Makefile.am
+--- gtkballs-2.0.orig/Makefile.am	Fri Oct  5 16:36:04 2001
++++ gtkballs-2.0/Makefile.am	Fri Apr 19 21:11:53 2002
+@@ -11,8 +11,8 @@
+ 	     gtkballs.wmconfig
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(datadir)/gtkballs
+-	$(INSTALL_DATA) COPYING $(datadir)/gtkballs
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs
++	$(INSTALL_DATA) COPYING $(DESTDIR)$(datadir)/gtkballs
+ 
+ install-data-hook:
+-	if [ ! -f $(localstatedir)/gtkballs-scores ]; then touch $(localstatedir)/gtkballs-scores; chmod 0666 $(localstatedir)/gtkballs-scores; fi
++	if [ ! -f $(DESTDIR)$(localstatedir)/gtkballs-scores ]; then touch $(DESTDIR)$(localstatedir)/gtkballs-scores; chmod 0666 $(DESTDIR)$(localstatedir)/gtkballs-scores; fi
+diff -urN gtkballs-2.0.orig/gtkballs-data/Makefile.am gtkballs-2.0/gtkballs-data/Makefile.am
+--- gtkballs-2.0.orig/gtkballs-data/Makefile.am	Fri Oct  5 16:20:23 2001
++++ gtkballs-2.0/gtkballs-data/Makefile.am	Fri Apr 19 21:11:53 2002
+@@ -1,16 +1,16 @@
+ EXTRA_DIST=gtkballs-logo.xpm gtkballs_16x16.xpm themes
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(datadir)/gtkballs
+-	$(INSTALL_DATA) *.xpm $(datadir)/gtkballs
+-	$(mkinstalldirs) $(datadir)/gtkballs/themes
+-	$(mkinstalldirs) $(datadir)/gtkballs/themes/Default
+-	for i in themes/Default/*.xpm; do $(INSTALL_DATA) $$i $(datadir)/gtkballs/themes/Default; done
+-	$(mkinstalldirs) $(datadir)/gtkballs/themes/Skull
+-	for i in themes/Skull/*.xpm; do $(INSTALL_DATA) $$i $(datadir)/gtkballs/themes/Skull; done
+-	$(mkinstalldirs) $(datadir)/gtkballs/themes/small
+-	for i in themes/small/*.xpm; do $(INSTALL_DATA) $$i $(datadir)/gtkballs/themes/small; done
+-	$(mkinstalldirs) $(localstatedir)
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs
++	$(INSTALL_DATA) *.xpm $(DESTDIR)$(datadir)/gtkballs
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs/themes
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs/themes/Default
++	for i in themes/Default/*.xpm; do $(INSTALL_DATA) $$i $(DESTDIR)$(datadir)/gtkballs/themes/Default; done
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs/themes/Skull
++	for i in themes/Skull/*.xpm; do $(INSTALL_DATA) $$i $(DESTDIR)$(datadir)/gtkballs/themes/Skull; done
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/gtkballs/themes/small
++	for i in themes/small/*.xpm; do $(INSTALL_DATA) $$i $(DESTDIR)$(datadir)/gtkballs/themes/small; done
++	$(mkinstalldirs) $(DESTDIR)$(localstatedir)
+ 
+ uninstall-local:
+-	rm -rf $(datadir)/gtkballs
++	rm -rf $(DESTDIR)$(datadir)/gtkballs
+diff -urN gtkballs-2.0.orig/po/Makefile.in.in gtkballs-2.0/po/Makefile.in.in
+--- gtkballs-2.0.orig/po/Makefile.in.in	Mon Oct  1 19:40:31 2001
++++ gtkballs-2.0/po/Makefile.in.in	Fri Apr 19 21:17:03 2002
+@@ -19,8 +19,8 @@
+ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ datadir = $(prefix)/@DATADIRNAME@
+-localedir = $(datadir)/locale
+-gnulocaledir = $(prefix)/share/locale
++localedir = $(DESTDIR)$(datadir)/locale
++gnulocaledir = $(DESTDIR)$(prefix)/share/locale
+ gettextsrcdir = $(prefix)/share/gettext/po
+ subdir = po
+ 
