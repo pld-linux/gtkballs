@@ -7,7 +7,6 @@ Version:	2.2.0
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Vendor:		Sergey Pinaev <dfo@antex.ru>
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
 Patch0:		%{name}-DESTDIR.patch
 Patch1:		%{name}-ac_fix.patch
