@@ -9,7 +9,7 @@ License:	GPL
 Group:		X11/Applications/Games
 Vendor:		Sergey Pinaev <dfo@antex.ru>
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
+Patch0:		http://mops.uci.agh.edu.pl/~gotar/%{name}-DESTDIR.patch
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel
