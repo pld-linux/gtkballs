@@ -3,13 +3,13 @@ Summary(fr):	Un simple jeu de logique
 Summary(pl):	Prosta gra logiczna
 Summary(ru):	Простая и увлекательная логическая игра
 Name:		gtkballs
-Version:	3.0.1
+Version:	3.1.4
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
-# Source0-md5:	0f9997110518460db508af353f6324c2
-Patch1:		%{name}2-desktop.patch
+# Source0-md5:	f25b4ffeb268a698bab8c8b86d6f8568
+Source1:	%{name}.desktop
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -38,15 +38,14 @@ ustawianie piЁek tego samego koloru w poziomych, pionowych b╠d╪
 uko╤nych liniach.
 
 %description -l ru
-GtkBalls -- это простая логическая игра.  Цель игры -- составлять
-линии максимальной длины из шариков одинакового цвета.  Минимальная
-длина линии за которую дают очки -- 5 шариков.  Если вы не составили
-линию за ход, то на следуюем ходу появляются новые шарики.  Игра
+GtkBalls -- это простая логическая игра. Цель игры -- составлять
+линии максимальной длины из шариков одинакового цвета. Минимальная
+длина линии за которую дают очки -- 5 шариков. Если вы не составили
+линию за ход, то на следуюем ходу появляются новые шарики. Игра
 заканчивается, когда на поле не остается места для новых шариков.
 
 %prep
 %setup -q
-%patch1 -p1
 
 %build
 rm -f missing
@@ -60,14 +59,15 @@ rm -f missing
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_applnkdir}/Games}
+install -d $RPM_BUILD_ROOT{%{_pixmapsdir},%{_desktopdir}}
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
 rm -f $RPM_BUILD_ROOT%{_datadir}/%{name}/COPYING
 
-ln -s %{_datadir}/%{name} $RPM_BUILD_ROOT%{_pixmapsdir}
 install gnome-gtkballs.png $RPM_BUILD_ROOT%{_pixmapsdir}
-install GtkBalls.desktop $RPM_BUILD_ROOT%{_applnkdir}/Games
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}
 
 %find_lang %{name}
 
@@ -81,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_mandir}/man6/*
 %attr(666,root,games) %{_localstatedir}/games/*
-%{_pixmapsdir}/*
-%{_applnkdir}/Games/*
+%{_desktopdir}/*
+%{_pixmapsdir}
