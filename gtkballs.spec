@@ -3,12 +3,12 @@ Summary(fr):	Un simple jeu de logique
 Summary(pl):	Prosta gra logiczna
 Summary(ru):	Простая и увлекательная логическая игра
 Name:		gtkballs
-Version:	3.1.4
+Version:	3.1.5
 Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
-# Source0-md5:	f25b4ffeb268a698bab8c8b86d6f8568
+Source0:	http://gtkballs.antex.ru/dist/%{name}-%{version}.tar.gz
+# Source0-md5:	1654799db1e9a46607b06f7ad3c0bf05
 Source1:	%{name}.desktop
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	autoconf
