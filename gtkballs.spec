@@ -3,21 +3,19 @@ Summary(fr):	Un simple jeu de logique
 Summary(pl):	Prosta gra logiczna
 Summary(ru):	Простая и увлекательная логическая игра
 Name:		gtkballs
-Version:	2.2.0
-Release:	2
+Version:	3.0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
 Source0:	ftp://ftp.antex.ru/pub/unix/dfo/gtkballs/%{name}-%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
-Patch1:		%{name}-desktop.patch
-Patch2:		%{name}-ac_fix.patch
+Patch1:		%{name}2-desktop.patch
 URL:		http://gtkballs.antex.ru/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel
+BuildRequires:	freetype-devel
+BuildRequires:	gtk+2-devel
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 The goal of this game is to make the highest score by matching a
@@ -45,9 +43,7 @@ GtkBalls -- это простая логическая игра.  Цель игры -- составлять
 
 %prep
 %setup -q
-%patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 rm -f missing
@@ -70,13 +66,12 @@ ln -s %{_datadir}/%{name} $RPM_BUILD_ROOT%{_pixmapsdir}
 install gnome-gtkballs.png $RPM_BUILD_ROOT%{_pixmapsdir}
 install GtkBalls.desktop $RPM_BUILD_ROOT%{_applnkdir}/Games
 
-#%find_lang %{name}
+%find_lang %{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
-#-f %{name}.lang
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README ChangeLog NEWS README.russian TODO
 %attr(755,root,games) %{_bindir}/*
