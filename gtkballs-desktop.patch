@@ -1,0 +1,31 @@
+diff -urN gtkballs-2.2.0.orig/GtkBalls.desktop gtkballs-2.2.0/GtkBalls.desktop
+--- gtkballs-2.2.0.orig/GtkBalls.desktop	Sat Oct 23 22:25:05 1999
++++ gtkballs-2.2.0/GtkBalls.desktop	Fri Jan 10 18:41:52 2003
+@@ -1,25 +1,9 @@
+ [Desktop Entry]
+ Name=GtkBalls
+-Name[fr]=GtkBalls
+-Name[ru]=GtkBalls
+-Name[it]=GtkBalls
+-Name[es]=GtkBalls
+-Name[nl]=GtkBalls
+-Name[ca]=GtkBalls
+-Name[sv]=GtkBalls
+-Name[da]=GtkBalls
+-Name[de]=GtkBalls
+-Name[eu]=GtkBalls
+-Name[fi]=GtkBalls
+-Name[hu]=GtkBalls
+-Name[ja]=GtkBalls
+-Name[ko]=GtkBalls
+-Name[no]=GtkBalls
+-Name[pt]=GtkBalls
+ Comment=A Simple Logic Game
+-Summary(ru): Простая и увлекательная логическая игра
+ Comment[fr]=Un Simple Jeu de Logique
+-TryExec=gtkballs
++Comment[pl]=Prosta gra logiczna
++Comment[ru]=Простая и увлекательная логическая игра
+ Exec=gtkballs
+ Icon=gnome-gtkballs.png
+ Terminal=0
