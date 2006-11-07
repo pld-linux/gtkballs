@@ -81,5 +81,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_mandir}/man6/*
 %attr(666,root,games) %{_localstatedir}/games/*
-%{_desktopdir}/*
+%{_desktopdir}/*.desktop
 %{_pixmapsdir}
