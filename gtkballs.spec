@@ -1,7 +1,7 @@
 Summary:	Simple logic game
-Summary(fr):	Un simple jeu de logique
-Summary(pl):	Prosta gra logiczna
-Summary(ru):	Простая и увлекательная логическая игра
+Summary(fr.UTF-8):   Un simple jeu de logique
+Summary(pl.UTF-8):   Prosta gra logiczna
+Summary(ru.UTF-8):   п÷я─п╬я│я┌п╟я▐ п╦ я┐п╡п╩п╣п╨п╟я┌п╣п╩я▄п╫п╟я▐ п╩п╬пЁп╦я┤п╣я│п╨п╟я▐ п╦пЁя─п╟
 Name:		gtkballs
 Version:	3.1.5
 Release:	1
@@ -25,24 +25,24 @@ The goal of this game is to make the highest score by matching a
 number of balls of the same color in a horizontal, vertical or
 diagonal line.
 
-%description -l fr
+%description -l fr.UTF-8
 GtkBalls est un simple jeu de logique. Le but du jeu est de faire le
-nombre maximum de lignes avec des balles de la mЙme couleur. Une ligne
-est constituИe de cinq balles. A chaque fois que vous ne faites pas
-une ligne, des balles suplИmentaires apparaissent sur la grille. Vous
+nombre maximum de lignes avec des balles de la mц╙me couleur. Une ligne
+est constituц╘e de cinq balles. A chaque fois que vous ne faites pas
+une ligne, des balles suplц╘mentaires apparaissent sur la grille. Vous
 perdez lorsque la grille est pleine.
 
-%description -l pl
-Celem gry jest zdobycie jak najwiЙkszej liczby punktСw poprzez
-ustawianie piЁek tego samego koloru w poziomych, pionowych b╠d╪
-uko╤nych liniach.
+%description -l pl.UTF-8
+Celem gry jest zdobycie jak najwiд≥kszej liczby punktцЁw poprzez
+ustawianie piе┌ek tego samego koloru w poziomych, pionowych bд┘dе╨
+ukoе⌡nych liniach.
 
-%description -l ru
-GtkBalls -- это простая логическая игра. Цель игры -- составлять
-линии максимальной длины из шариков одинакового цвета. Минимальная
-длина линии за которую дают очки -- 5 шариков. Если вы не составили
-линию за ход, то на следуюем ходу появляются новые шарики. Игра
-заканчивается, когда на поле не остается места для новых шариков.
+%description -l ru.UTF-8
+GtkBalls -- я█я┌п╬ п©я─п╬я│я┌п╟я▐ п╩п╬пЁп╦я┤п╣я│п╨п╟я▐ п╦пЁя─п╟. п╕п╣п╩я▄ п╦пЁя─я▀ -- я│п╬я│я┌п╟п╡п╩я▐я┌я▄
+п╩п╦п╫п╦п╦ п╪п╟п╨я│п╦п╪п╟п╩я▄п╫п╬п╧ п╢п╩п╦п╫я▀ п╦п╥ я┬п╟я─п╦п╨п╬п╡ п╬п╢п╦п╫п╟п╨п╬п╡п╬пЁп╬ я├п╡п╣я┌п╟. п°п╦п╫п╦п╪п╟п╩я▄п╫п╟я▐
+п╢п╩п╦п╫п╟ п╩п╦п╫п╦п╦ п╥п╟ п╨п╬я┌п╬я─я┐я▌ п╢п╟я▌я┌ п╬я┤п╨п╦ -- 5 я┬п╟я─п╦п╨п╬п╡. п∙я│п╩п╦ п╡я▀ п╫п╣ я│п╬я│я┌п╟п╡п╦п╩п╦
+п╩п╦п╫п╦я▌ п╥п╟ я┘п╬п╢, я┌п╬ п╫п╟ я│п╩п╣п╢я┐я▌п╣п╪ я┘п╬п╢я┐ п©п╬я▐п╡п╩я▐я▌я┌я│я▐ п╫п╬п╡я▀п╣ я┬п╟я─п╦п╨п╦. п≤пЁя─п╟
+п╥п╟п╨п╟п╫я┤п╦п╡п╟п╣я┌я│я▐, п╨п╬пЁп╢п╟ п╫п╟ п©п╬п╩п╣ п╫п╣ п╬я│я┌п╟п╣я┌я│я▐ п╪п╣я│я┌п╟ п╢п╩я▐ п╫п╬п╡я▀я┘ я┬п╟я─п╦п╨п╬п╡.
 
 %prep
 %setup -q
