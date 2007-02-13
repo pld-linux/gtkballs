@@ -1,7 +1,7 @@
 Summary:	Simple logic game
-Summary(fr.UTF-8):   Un simple jeu de logique
-Summary(pl.UTF-8):   Prosta gra logiczna
-Summary(ru.UTF-8):   Простая и увлекательная логическая игра
+Summary(fr.UTF-8):	Un simple jeu de logique
+Summary(pl.UTF-8):	Prosta gra logiczna
+Summary(ru.UTF-8):	Простая и увлекательная логическая игра
 Name:		gtkballs
 Version:	3.1.5
 Release:	1
