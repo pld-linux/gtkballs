@@ -11,6 +11,7 @@ Source0:	http://gtkballs.antex.ru/dist/%{name}-%{version}.tar.gz
 # Source0-md5:	1654799db1e9a46607b06f7ad3c0bf05
 Source1:	%{name}.desktop
 URL:		http://gtkballs.antex.ru/
+Patch0:		%{name}-Makefile.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	freetype-devel
@@ -46,6 +47,7 @@ GtkBalls -- это простая логическая игра. Цель игр
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 rm -f missing
