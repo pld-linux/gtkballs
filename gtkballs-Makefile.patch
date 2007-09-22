@@ -1,0 +1,11 @@
+--- gtkballs-3.1.5.orig/po/Makefile.in.in	2007-09-22 15:38:14.812183356 +0200
++++ gtkballs-3.1.5/po/Makefile.in.in	2007-09-22 15:47:29.038183890 +0200
+@@ -28,7 +28,7 @@
+ 
+ INSTALL = @INSTALL@
+ INSTALL_DATA = @INSTALL_DATA@
+-MKINSTALLDIRS = @MKINSTALLDIRS@
++MKINSTALLDIRS = @top_srcdir@/mkinstalldirs
+ mkinstalldirs = $(SHELL) $(MKINSTALLDIRS)
+ 
+ GMSGFMT = @GMSGFMT@
